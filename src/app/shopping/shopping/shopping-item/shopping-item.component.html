@@ -1,0 +1,21 @@
+<div class="row product" [ngClass]="{'gift-card': isGift}">
+    <div class="product-image col-md-1">
+        <img [src]="product.imageUrl" class="img" alt="">
+    </div>
+    <div class="product-details col-md-3 align-middle">
+        <div *ngIf="product.tagline" class="product-tagline">{{product?.tagline}}</div>
+        <div class="product-name">{{product?.name}}</div>
+        <div class="product-desc">
+            <span *ngFor="let line of product.description">
+        {{line}}
+        <br>
+      </span>
+        </div>
+        <div class="product-plan" *ngIf="product?.planLink">
+            <a class="product-plan-link " [href]="product?.planLink">View Plans</a></div>
+    </div>
+    <div class="price offset-md-1 col-md-2 align-middle">{{product?.price}} $</div>
+    <div class="quantity col-md-2  align-middle">1</div>
+    <div class="subtotal col-md-2 align-middle">{{product?.price}}</div>
+
+</div>

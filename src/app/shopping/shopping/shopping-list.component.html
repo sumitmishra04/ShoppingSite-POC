@@ -1,0 +1,22 @@
+<div class="container-fluid list-align">
+    <div class="alert alert-success">
+        Shop for $5000 or more and get 10% discount on your order
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item col-md-12">
+            <div class="row">
+                <span class="h6 col-md-1">Product</span>
+                <span class="col-md-4"></span>
+                <span class="h6 col-md-2">Price</span>
+                <span class="h6 col-md-2">Quantity</span>
+                <span class="h6 col-md-2">Subtotal</span>
+            </div>
+
+        </li>
+        <li class="list-group-item col-12 col-md-12" *ngFor="let item of productList">
+            <app-shopping-item [product]="item"></app-shopping-item>
+            <app-shopping-item *ngIf="item.gift" [product]="item.gift" [isGift]="true"></app-shopping-item>
+        </li>
+    </ul>
+</div>

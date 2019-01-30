@@ -1,0 +1,18 @@
+.list-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    width: 83.33%;
+    color: white;
+    background: #9b69bf;
+    text-align: center;
+}
+
+.list-group {
+    width: 80vw;
+    margin-bottom: 30px;
+}

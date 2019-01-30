@@ -1,0 +1,55 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "Earphones",
+            "price": 12690,
+            "imageUrl": "Earphone.png",
+            "desc": "Silver"
+        },
+        {
+            "id": 2,
+            "tagline": "200 Cash back",
+            "name": "Test 6X",
+            "price": 14000,
+            "imageUrl": "phone.png",
+            "desc": "32GB Gold \n\n Extended Warranty",
+            "planLink": "http://pointstonothing.com/linktoplan",
+            "gift": {
+                "name": "Glory Selfie Stick",
+                "desc": "Silver Moon",
+                "price": 175,
+                "imageUrl": "stick.png"
+            }
+        }
+    ],
+    "pincode": {
+        "560066": {
+            "deliveryPrice": 50,
+            "cashOnDelivery": false,
+            "estimatedDays": {
+                "min": 2,
+                "max": 5
+            }
+        },
+        "560067": {
+            "deliveryPrice": 0,
+            "cashOnDelivery": true,
+            "estimatedDays": {
+                "min": 3,
+                "max": 5
+            }
+        },
+        "560068": {
+            "deliveryPrice": 0,
+            "cashOnDelivery": false,
+            "estimatedDays": {
+                "min": 5,
+                "max": 5
+            }
+        }
+    },
+    "discount": {
+        "minTotal": 5000,
+        "discountPercentage": 10
+    }
+}

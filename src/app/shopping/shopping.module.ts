@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShoppingListComponent } from './shopping/shoppingList/shopping-list.component';
-import { ShoppingItemComponent } from './shopping/shoppingList/shopping-item/shopping-item.component';
+import { ShoppingListComponent } from './shopping/shopping-list.component';
+import { ShoppingItemComponent } from './shopping/shopping-item/shopping-item.component';
 import { DeliveryInfoComponent } from './delivery-info/delivery-info.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
