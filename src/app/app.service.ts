@@ -15,5 +15,8 @@ export class AppService {
     return this.http.get(this.url).pipe(map(data => data['products']));
   }
 
+  getDeliveryDetailData() {
+    return this.http.get(this.url).pipe(map(data => data['pincode']));
+  }
 
 }

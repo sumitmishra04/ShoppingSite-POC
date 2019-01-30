@@ -1,0 +1,16 @@
+.top-row {
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #777;
+}
+
+.bottom-row {
+    font-size: 10px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+    span {
+        width: 85px;
+    }
+}
