@@ -13,7 +13,7 @@ export class ShoppingItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
+
   }
 
 }
