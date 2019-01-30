@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../../app.service';
+import { Pincode } from '../../Model/delivery-info';
 
 @Component({
   selector: 'app-order-summary',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderSummaryComponent implements OnInit {
 
-  constructor() { }
+  delivery: Pincode;
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+   
   }
 
 }

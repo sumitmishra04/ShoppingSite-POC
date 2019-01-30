@@ -12,9 +12,6 @@ export class AppComponent {
   title = 'TestShoppingSite';
 
   constructor(private appService: AppService) {
-    this.appService.getDeliveryDetailData().subscribe( (data: Pincode) => {
-      console.log(data, data['560066']);
-    });
   }
 
 }
