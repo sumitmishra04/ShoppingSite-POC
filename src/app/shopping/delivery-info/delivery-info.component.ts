@@ -9,7 +9,9 @@ import { Pincode } from '../../Model/delivery-info';
 })
 export class DeliveryInfoComponent implements OnInit {
   delivery: Pincode;
-  deliveryService = 'Free Delivery';
+  deliveryService = '';
+  cod: string = '';
+  estimatedDays = '';
   constructor(private appService: AppService) { }
 
   ngOnInit() {
@@ -19,7 +21,15 @@ export class DeliveryInfoComponent implements OnInit {
         if (this.delivery.deliveryPrice === 0) {
           this.deliveryService = 'Free Delivery';
         } else {
-          this.deliveryService = 'Delivery charge is ' + this.delivery.deliveryPrice ;
+          this.deliveryService = 'Delivery charge is $' + this.delivery.deliveryPrice ;
+        }
+        if(this.delivery.cashOnDelivery){
+          this.cod = 'Cash On delivery'
+        } else {
+          this.cod = 'Cash On Delivery not available'
+        }
+        if(this.delivery.estimatedDays){
+          this.estimatedDays =  `Estimated delivery time is ${this.delivery.estimatedDays.min} - ${this.delivery.estimatedDays.max} days`;
         }
       }
     });

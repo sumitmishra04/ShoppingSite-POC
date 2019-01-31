@@ -1,35 +1,45 @@
 <div class="container-fluid list-align">
-    <div class="row alert alert-success">
-        Shop for $5000 or more and get 10% discount on your order
-    </div>
-    <div class="row">
-        <div class="h2 text-left">Shopping Cart</div>
-    </div>
-    <ul class="list-group">
-        <li class="list-group-item col-md-12">
-            <div class="row">
-                <span class="h6 col-md-1">Product</span>
-                <span class="col-md-4"></span>
-                <span class="h6 col-md-2">Price</span>
-                <span class="h6 col-md-2">Quantity</span>
-                <span class="h6 col-md-2">Subtotal</span>
-            </div>
+  <div class="row alert alert-success">
+    <span class="alert-align">Shop for $5000 or more and get 10% discount on your order</span>
+  </div>
+  <div class="row heading-width">
+    <span class="h2 col-md-12 text-left">Shopping Cart</span>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item col-md-12 header-row">
+      <div class="row">
+        <span class="h6 col-md-1">Product</span>
+        <span class="col-md-4"></span>
+        <span class="h6 col-md-2">Price</span>
+        <span class="h6 col-md-2">Quantity</span>
+        <span class="h6 col-md-2">Subtotal</span>
+      </div>
 
-        </li>
-        <li class="list-group-item col-12 col-md-12" *ngFor="let item of productList">
-            <app-shopping-item [product]="item"></app-shopping-item>
-            <app-shopping-item *ngIf="item.gift" [product]="item.gift" [isGift]="true"></app-shopping-item>
-        </li>
-        <li class="list-group-item col-12 col-md-12">
-            <div class="row">
-                <div class="col-md-3">
-                    <app-delivery-info></app-delivery-info>
-                </div>
-                <div class="offset-md-4  col-md-5">
-                    <app-order-summary></app-order-summary>
-                </div>
-            </div>
-        </li>
-    </ul>
+    </li>
+    <li class="list-group-item col-12 col-md-12" *ngFor="let item of productList">
+      <app-shopping-item [product]="item"></app-shopping-item>
+      <app-shopping-item *ngIf="item.gift" [product]="item.gift" [isGift]="true"></app-shopping-item>
+    </li>
+    <li class="list-group-item col-12 col-md-12 last-row">
+      <div class="flex-row">
+        <div class="my-card">
+          <app-delivery-info></app-delivery-info>
+        </div>
+        <div class="my-card order-width">
+          <app-order-summary></app-order-summary>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+  <div class="sm-screen">
+    <div class="my-card">
+      <app-delivery-info></app-delivery-info>
+    </div>
+    <div class="my-card order-width">
+      <app-order-summary></app-order-summary>
+    </div>
+  </div>
+
 
 </div>

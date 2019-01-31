@@ -1,3 +1,30 @@
-.jumbotron{
-    padding: 50px
+.jumbotron {
+  padding: 15px;
+  margin-bottom: 0px;
+  background: white;
+  margin : 0 auto;
+  width: 40%;
+}
+.breadcrumb{
+  background: white;
+  text-transform: uppercase;
+  margin : 0 auto;
+
+}
+.show-sm{
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .jumbotron {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 0 2px 2px rgba(0,0,0, 0.5)
+  }
+  .breadcrumb{
+    display: none;
+  }
+  .show-sm{
+    display: block;
+    font-weight: 700;
+  }
 }

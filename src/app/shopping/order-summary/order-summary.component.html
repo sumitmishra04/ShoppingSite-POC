@@ -1,3 +1,26 @@
-<p>
-  order-summary works!
-</p>
+<div>
+  <h4>Order Summary ({{totalItem}} items)</h4>
+  <div class="pd">
+    <div class="row">
+      <div class="col-md-6  col-6">Subtotal</div>
+      <div class="col-md-6 text-right col-6">{{subtotal}}$</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-6">Total Discount</div>
+      <div class="col-md-6 text-right col-6">-{{discount}}$</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-6">Standard Discount</div>
+      <div class="col-md-6 text-right col-6">Free</div>
+    </div>
+    <div class="row pt-20">
+      <div class="col-md-6 col-6">Order Total</div>
+      <div class="col-md-6 text-right h2 col-6">{{total}}$</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 blue-text">Continue Shopping</div>
+      <div class="col-md-6 text-right checkout">Checkout</div>
+    </div>
+  </div>
+
+</div>

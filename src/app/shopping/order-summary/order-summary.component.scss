@@ -1,0 +1,29 @@
+.pd .row{
+    padding-top: 10px;
+}
+.pt-20{
+    padding-top: 20px !important;
+}
+
+.checkout{
+padding: 10px;
+color: white;
+background: #0303a7;
+font-weight: 600;
+text-align: center !important;
+border-radius: 100px;
+}
+.blue-text{
+    color:#0303a7;
+    font-weight: 700;
+}
+@media only screen and (max-width: 767px) {
+    .checkout{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .blue-text{
+        text-align: center
+    }
+}
+

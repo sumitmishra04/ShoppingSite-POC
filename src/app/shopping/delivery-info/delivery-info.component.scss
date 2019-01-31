@@ -3,14 +3,34 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #777;
+    padding-bottom: 10px;
 }
 
 .bottom-row {
+    padding-top: 10px;
     font-size: 10px;
     color: #999;
     display: flex;
     justify-content: space-between;
     span {
-        width: 85px;
+        width: 100px;
     }
+}
+.delivery-container{
+    padding: 25px
+
+}
+.pl{
+    margin-left: -10px;
+}
+.blue-text{
+    color:#0303a7;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 767px) {
+.pl{
+    margin-bottom: 40px;
+}
+
 }

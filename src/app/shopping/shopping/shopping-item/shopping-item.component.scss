@@ -1,60 +1,115 @@
 .product {
-    padding: 30px;
-    &-details {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    &-name {
-        color: #222;
-        font-weight: 500;
-    }
-    &-desc {
-        color: #999;
-        position: relative;
-    }
-    &-image {
-        border: 1px solid lightgrey;
-        border-radius: 4px;
-        height: 100px;
-        width: 100px;
-        position: relative;
-        .img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    &-tagline {
-        background: indigo;
-        color: white;
-        font-weight: bold;
-        padding: 0px 10px;
-        width: fit-content;
-        border-radius: 4px;
-    }
-    &-plan {
-        display: inline;
-        position: absolute;
-        right: 10px;
-        bottom: 0%;
-        &-link {
-            color: indigo;
-            font-weight: bold;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-}
+  padding: 30px;
 
-.gift-card {
-    background-color: #e2e2e2;
-}
-
-.align-middle {
+  &-details {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &-name {
+    color: #222;
+    font-weight: 500;
+  }
+
+  &-desc {
+    color: #999;
+    position: relative;
+  }
+
+  &-image {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    height: 100px;
+    width: 100px;
+    background: white;
+    position: relative;
+
+    .img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-tagline {
+    background: indigo;
+    color: white;
+    font-weight: bold;
+    padding: 0px 10px;
+    width: fit-content;
+    border-radius: 4px;
+  }
+
+  &-plan {
+    display: inline;
+    position: absolute;
+    right: -15px;
+    ;
+    bottom: 0%;
+
+    &-link {
+      color: indigo;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.gift-card {
+  background-color: #e2e2e2;
+}
+
+.align-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control {
+  width: 30%;
+  display: inline;
+}
+
+.icon-width {
+  margin: 0 10px;
+  width: 16px;
+  height: 16px;
+  display: inline;
+}
+
+.align-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-left: 5px;
+}
+
+.form-control:disabled {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.subtotal {
+  text-align: center
+}
+
+@media only screen and (max-width: 767px) {
+    .subtotal, .product-plan, .del{
+        display: none;
+    }
+    .product-tagline{
+        font-size: 10px;
+    }
+    
 }

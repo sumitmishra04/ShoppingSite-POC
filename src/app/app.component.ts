@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { AppService } from './app.service';
-import { Product } from './Model/product';
-import { Pincode } from './Model/delivery-info';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +10,10 @@ export class AppComponent {
   title = 'TestShoppingSite';
 
   constructor(private appService: AppService) {
+  }
+
+  ngOnInit(){
+    this.appService.getSubtotal().subscribe(data => console.log(data))
   }
 
 }

@@ -1,8 +1,8 @@
 <div class="row product" [ngClass]="{'gift-card': isGift}">
-    <div class="product-image col-md-1">
+    <div class="product-image col-md-1 col-3">
         <img [src]="product.imageUrl" class="img" alt="">
     </div>
-    <div class="product-details col-md-3 align-middle">
+    <div class="product-details col-md-3 align-middle col-4">
         <div *ngIf="product.tagline" class="product-tagline">{{product?.tagline}}</div>
         <div class="product-name">{{product?.name}}</div>
         <div class="product-desc">
@@ -14,7 +14,15 @@
         <div class="product-plan" *ngIf="product?.planLink">
             <a class="product-plan-link " [href]="product?.planLink">View Plans</a></div>
     </div>
-    <div class="price offset-md-1 col-md-2 align-middle">{{product?.price}} $</div>
-    <div class="quantity col-md-2  align-middle">1</div>
-    <div class="subtotal col-md-2 align-middle">{{product?.price}}</div>
+    <div class="price offset-md-1 col-md-2 align-middle col-2">{{product?.price}} $</div>
+    <div class="quantity col-md-2  col-3 align-middle align-horizontal" *ngIf="!isGift">
+        <a><img [src]="minusUrl" alt="" class="icon-width" (click)="decrement()"></a>
+        <input type="number" class="form-control" disabled [value]="quantity" #count>
+        <a><img src="../../../../assets/Images/plus.png" alt="" class="icon-width" (click)="increment()"></a>
+    </div>
+    <div class="subtotal col-md-2 align-middle" *ngIf="!isGift">{{subtotal}} $</div>
+    <div class="subtotal col-md-1 align-middle" *ngIf="!isGift">
+        <img src="../../../../assets/Images/DELETE.png" alt="" class="icon-width del">
+    </div>
+
 </div>
